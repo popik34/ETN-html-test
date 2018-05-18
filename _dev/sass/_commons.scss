@@ -1,0 +1,19 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  color: $font-color;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a, a:active, a:hover {
+  color: $font-color;
+  text-decoration: none;
+}
