@@ -6,75 +6,98 @@
 </head>
 
 <body>
-    <nav class="mt-4 mb-4">
+    <div class="header">
+        <nav class="container mt-2 mb-2">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="logo">
+                            <img src="assets/img/logo.png">
+                        </div>
+                    </div>
+
+                    <div class="col-8 d-flex justify-content-right">
+                        <ul class="top-menu">
+                            <li class="top-menu-item"><a href="#">Domů</a></li>
+                            <li class="top-menu-item active"><a href="#">Kdo jsme</a></li>
+                            <li class="top-menu-item"><a href="#">Co děláme</a></li>
+                            <li class="top-menu-item"><a href="#">Reference</a></li>
+                            <li class="top-menu-item"><a href="#">Práce u nás (4)</a></li>
+                            <li class="top-menu-item"><a href="#">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+
         <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <div class="logo">
-                        <img src="assets/img/logo.png">
+            <div class="carousel mb-4">
+                <div id="carousel-image-1" class="carousel-image active">
+                    <img src="assets/img/slide-1.png">
+                    <div class="carousel-caption">
+                        <h1>Mobile development 1</h1>
+                        <p class="">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.</p>
+                        <p class="">Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
+                    </div>
+                    <div class="carousel-link">
+                        <a href="#">Více o mobile</a>
+                    </div>
+                </div>
+                <div id="carousel-image-2" class="carousel-image">
+                    <img src="assets/img/slide-2.png">
+                    <div class="carousel-caption">
+                        <h1>Mobile development 2</h1>
+                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla quis diam. Pellentesque sapien.</p>
+                        <p>Pellentesque ipsum. Nullam rhoncus aliquam metus. Aliquam erat volutpat. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem.</p>
+                    </div>
+                    <div class="carousel-link">
+                        <a href="#">Více o mobile</a>
+                    </div>
+                </div>
+                <div id="carousel-image-3" class="carousel-image">
+                    <img src="assets/img/slide-3.png">
+                    <div class="carousel-caption">
+                        <h1>Mobile development 3</h1>
+                        <p>Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Pellentesque ipsum. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
                     </div>
                 </div>
 
-                <div class="col-8 d-flex justify-content-right">
-                    <ul class="top-menu">
-                        <li class="top-menu-item"><a href="#">Domů</a></li>
-                        <li class="top-menu-item active"><a href="#">Kdo jsme</a></li>
-                        <li class="top-menu-item"><a href="#">Co děláme</a></li>
-                        <li class="top-menu-item"><a href="#">Reference</a></li>
-                        <li class="top-menu-item"><a href="#">Práce u nás (4)</a></li>
-                        <li class="top-menu-item"><a href="#">Kontakt</a></li>
-                    </ul>
+                <div class="carousel-controls">
+                    <div class="carousel-arrow-left" onclick="nextSlide(-1)"><i class="material-icons">chevron_left</i></div>
+                    <div class="carousel-arrow-right" onclick="nextSlide(+1)"><i class="material-icons">chevron_right</i></div>
+                </div>
+                <div class="carousel-link">
+                    <a class="active" href="#">Více o mobile</a>
+                </div>
+            </div>
+
+            <div class="quick-news mb-4">
+                <div class="quick-news-date">
+                    Před 12 dny
+                </div>
+                <div class="quick-news-content">
+                     Nunc auctor. Etiam commodo dui eget wisi. Aliquam ornare wisi eu.
+                </div>
+                <div class="quick-news-link">
+                    <a class="active" href="#">Přečíst</a>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <div class="container">
-        <div class="carousel">
-            <div id="carousel-image-1" class="carousel-image active">
-                <img src="assets/img/slide-1.png">
-                <div class="carousel-caption">
-                    <h2>Mobile development 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus faucibus molestie nisl. Nunc dapibus tortor vel mi dapibus sollicitudin.</p>
-                    <p>In enim a arcu imperdiet malesuada. Mauris dictum facilisis augue. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu</p>
-                </div>
-                <div class="carousel-link">
-                    <a href="#">Více o mobile</a>
-                </div>
-            </div>
-            <div id="carousel-image-2" class="carousel-image">
-                <img src="assets/img/slide-2.png">
-                <div class="carousel-caption">
-                    <h2>Mobile development 2</h2>
-                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla quis diam. Pellentesque sapien.</p>
-                    <p>Pellentesque ipsum. Nullam rhoncus aliquam metus. Aliquam erat volutpat. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem.</p>
-                </div>
-                <div class="carousel-link">
-                    <a href="#">Více o mobile</a>
-                </div>
-            </div>
-            <div id="carousel-image-3" class="carousel-image">
-                <img src="assets/img/slide-3.png">
-                <div class="carousel-caption">
-                    <h2>Mobile development 3</h2>
-                    <p>Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Pellentesque ipsum. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                </div>
-            </div>
+    <div class="body-content">
+        <div class="container-75">
+            <h2>Fronty u kávovaru</h2>
 
-            <div class="carousel-controls">
-                <div class="carousel-arrow-left" onclick="nextSlide(-1)"><i class="material-icons">chevron_left</i></div>
-                <div class="carousel-arrow-right" onclick="nextSlide(+1)"><i class="material-icons">chevron_right</i></div>
-            </div>
-            <div class="carousel-link">
-                <a href="#">Více o mobile</a>
-            </div>
-        </div>
+            <img class="float-left mb-2 mr-2" src="assets/img/covfefe.png">
 
-        <div class="quick-news">
-            Před 12 dny
-            Nunc auctor. Etiam commodo dui eget wisi. Aliquam ornare wisi eu metus.
-            Přečíst
+            <p>Arabica latte shop macchiato doppio coffee steamed. Brewed, macchiato grounds medium, eu breve grinder frappuccino americano. Pumpkin spice, caffeine chicory dark medium arabica macchiato instant rich. Et, single shot aged half and half lungo whipped, cinnamon cappuccino whipped id mazagran.</p>
+
+            <p><b>Con panna</b> sugar macchiato so macchiato in skinny variety mug that. A plunger pot acerbic, brewed medium java aromatic coffee. At mocha wings acerbic beans medium saucer. Cup extra sit half and half robust java crema turkish.</p>
+
+            <br/>
+            <p>Medium aroma cream qui medium coffee arabica, caffeine et <a class="active" href="#">caramelization cup</a> plunger pot. Eu, plunger pot organic dark, cinnamon, redeye wings fair trade whipped lungo crema. Carajillo caramelization americano, plunger pot, filter coffee foam siphon roast and java.</p>
+
+            <p>Galão a, breve, at white, latte variety irish at flavour barista. Half and half, so, sweet, <span class="tooltip">affogato galão <span class="tooltip-text">espresso!</span></span>, half and half sugar irish trifecta chicory. Single origin, espresso, con panna french press et steamed robust.</p>
         </div>
     </div>
 </body>

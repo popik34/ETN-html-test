@@ -5,22 +5,40 @@
 
 body {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
-  font-size: 1.1rem;
+  color: $font-color;
+  font-size: 16px;
 }
 
-a:hover {
+p {
+  font-size: 18px;
+}
+
+a:hover, a.active {
   color: $color-primary;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 3rem;
 }
 
 h2 {
   font-weight: 100;
   font-size: 3rem;
+  margin-top: 0;
+  padding-top: 1rem;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
   width: 1400px;
+}
+
+.container-75 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1400 * 0.75px;
 }
 
 .row {
@@ -43,12 +61,48 @@ h2 {
   width: 100 / 12 * 8%;
 }
 
+.mt-2 {
+  margin-top: 1rem
+}
+
 .mt-4 {
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
 }
 
 .mb-4 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.mr-2 {
+  margin-right: 1rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.float-left {
+  float: left;
+}
+
+.header {
+  background: #fff;
+}
+
+.body-content {
+  background: $gray-light;
+}
+
+.footer {
+  background: #fff;
 }
 
 .top-menu-item {
@@ -56,6 +110,7 @@ h2 {
   display: inline-flex;
   position: relative;
   margin: 0 1rem;
+  font-size: 1.1rem;
 
   & a {
     padding: 1rem 0;
@@ -110,24 +165,30 @@ h2 {
 
   .carousel-caption {
     position: absolute;
-    left: 15%;
+    left: 12.5%;
     top: 10%;
-    width: 50%;
+    width: 45%;
     z-index: 1;
+    font-size: $font-size-lg;
+
+    h1 {
+      text-shadow: 1px 1px 4px $font-color;
+    }
   }
 
   .carousel-link {
     position: absolute;
-    right: 20%;
+    right: 12.5%;
     top: 75%;
     background: #fff;
-    padding: 1rem 3rem;
+    padding: 1rem 0;
     border-radius: 4rem;
     z-index: 1;
+    border: 1px solid $color-primary;
 
     a {
-      padding: 1rem 0;
-      color: $color-primary;
+      border-radius: 4rem;
+      padding: 1rem 4rem;
     }
   }
 
@@ -152,6 +213,54 @@ h2 {
 
     .carousel-arrow-right {
       right: 0;
+    }
+  }
+}
+
+.quick-news {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+  div {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    display: inline-flex;
+  }
+
+  .quick-news-date {
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    color: $gray;
+  }
+}
+
+.tooltip {
+  border-bottom: 1px dashed $color-primary;
+  position: relative;
+
+  .tooltip-text {
+    position: absolute;
+    left: 0;
+    top: -2rem;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    line-height: 1.5;
+    color: #fff;
+    border-radius: 0.25rem;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid rgba(0,0,0,0.7);
     }
   }
 }
