@@ -14,5 +14,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^4.0.1"
+  },
+  "dependencies": {
+    "material-design-icons-iconfont": "^3.0.3"
   }
 }

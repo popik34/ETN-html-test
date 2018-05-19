@@ -1,6 +1,7 @@
 @import "_variables";
 @import "_mixins";
 @import "_commons";
+@import "../../node_modules/material-design-icons-iconfont/dist/material-design-icons.scss";
 
 body {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
@@ -9,6 +10,11 @@ body {
 
 a:hover {
   color: $color-primary;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 3rem;
 }
 
 .container {
@@ -37,6 +43,14 @@ a:hover {
   width: 100 / 12 * 8%;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .top-menu-item {
   text-transform: uppercase;
   display: inline-flex;
@@ -61,5 +75,83 @@ a:hover {
   &:hover:after {
     width: 100%;
   }
+
+  &.active {
+    a {
+      color: $color-primary;
+    }
+
+    &:after {
+      width: 100%;
+    }
+  }
 }
 
+.carousel {
+  width: 100%;
+  position: relative;
+
+  .carousel-image{
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &.active {
+      opacity: 1;
+      position: initial;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .carousel-caption {
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    width: 50%;
+    z-index: 1;
+  }
+
+  .carousel-link {
+    position: absolute;
+    right: 20%;
+    top: 75%;
+    background: #fff;
+    padding: 1rem 3rem;
+    border-radius: 4rem;
+    z-index: 1;
+
+    a {
+      padding: 1rem 0;
+      color: $color-primary;
+    }
+  }
+
+  .carousel-controls {
+
+    .material-icons {
+      font-size: 8rem;
+    }
+
+    .carousel-arrow-left, .carousel-arrow-right {
+      &:hover .material-icons {
+        color: $color-primary;
+      }
+      position: absolute;
+      top: calc(50% - 8rem / 2);
+      cursor: pointer;
+    }
+
+    .carousel-arrow-left {
+      left: 0;
+    }
+
+    .carousel-arrow-right {
+      right: 0;
+    }
+  }
+}
