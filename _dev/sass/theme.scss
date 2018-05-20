@@ -1,12 +1,28 @@
+@import "../../node_modules/material-icons/iconfont/variables.scss";
+
 @import "_variables";
 @import "_mixins";
 @import "_commons";
-@import "../../node_modules/material-design-icons-iconfont/dist/material-design-icons.scss";
+@import "components/carousel";
+@import "components/quick-news";
+@import "components/tooltip";
+@import "components/top-menu";
+
+@import "../../node_modules/material-icons/iconfont/material-icons.scss";
+
 
 body {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
   color: $font-color;
   font-size: 16px;
+
+  @include sm {
+    text-align: center;
+  }
+
+  @include md {
+    text-align: center;
+  }
 }
 
 p {
@@ -24,21 +40,23 @@ h1 {
 
 h2 {
   font-weight: 100;
-  font-size: 3rem;
   margin-top: 0;
-  padding-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1400px;
+  width: 100%;
+  max-width: 1400px;
 }
 
 .container-75 {
   margin-left: auto;
   margin-right: auto;
-  width: 1400 * 0.75px;
+  width: 90%;
+  max-width: 1400 * 0.75px;
 }
 
 .row {
@@ -51,14 +69,6 @@ h2 {
 
 .justify-content-right {
   justify-content: flex-end;
-}
-
-.col-4 {
-  width: 100 / 12 * 4%;
-}
-
-.col-8 {
-  width: 100 / 12 * 8%;
 }
 
 .mt-2 {
@@ -91,6 +101,18 @@ h2 {
 
 .float-left {
   float: left;
+
+  @include sm {
+    float: none;
+  }
+
+  @include md {
+    float: none;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .header {
@@ -99,168 +121,40 @@ h2 {
 
 .body-content {
   background: $gray-light;
+  padding: 1rem 0;
 }
 
 .footer {
   background: #fff;
-}
+  text-align: center;
 
-.top-menu-item {
-  text-transform: uppercase;
-  display: inline-flex;
-  position: relative;
-  margin: 0 1rem;
-  font-size: 1.1rem;
-
-  & a {
-    padding: 1rem 0;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    left: 0;
-    bottom: .5rem;
-    width: 0;
-    background: $color-primary;
-    transition: width .3s ease-out;
-  }
-
-  &:hover:after {
-    width: 100%;
-  }
-
-  &.active {
-    a {
-      color: $color-primary;
-    }
-
-    &:after {
-      width: 100%;
-    }
+  .copyright {
+    font-weight: 600;
   }
 }
 
-.carousel {
-  width: 100%;
-  position: relative;
-
-  .carousel-image{
-    transition: opacity 1s ease-out;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-
-    &.active {
-      opacity: 1;
-      position: initial;
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .carousel-caption {
-    position: absolute;
-    left: 12.5%;
-    top: 10%;
-    width: 45%;
-    z-index: 1;
-    font-size: $font-size-lg;
-
-    h1 {
-      text-shadow: 1px 1px 4px $font-color;
-    }
-  }
-
-  .carousel-link {
-    position: absolute;
-    right: 12.5%;
-    top: 75%;
-    background: #fff;
-    padding: 1rem 0;
-    border-radius: 4rem;
-    z-index: 1;
-    border: 1px solid $color-primary;
-
-    a {
-      border-radius: 4rem;
-      padding: 1rem 4rem;
-    }
-  }
-
-  .carousel-controls {
-
-    .material-icons {
-      font-size: 8rem;
-    }
-
-    .carousel-arrow-left, .carousel-arrow-right {
-      &:hover .material-icons {
-        color: $color-primary;
-      }
-      position: absolute;
-      top: calc(50% - 8rem / 2);
-      cursor: pointer;
-    }
-
-    .carousel-arrow-left {
-      left: 0;
-    }
-
-    .carousel-arrow-right {
-      right: 0;
-    }
-  }
-}
-
-.quick-news {
-  width: 50%;
+.chart {
+  width: 55%;
   margin-left: auto;
   margin-right: auto;
+  height: 250px;
+}
 
-  div {
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
-    display: inline-flex;
+.columns {
+  column-count: 2;
+  column-gap: 7.5rem;
+  hyphens: auto;
+
+  @include sm {
+    column-count: 1;
   }
 
-  .quick-news-date {
-    font-size: $font-size-sm;
-    text-transform: uppercase;
-    color: $gray;
+  @include md {
+    column-count: 1;
+  }
+
+  p:first-child {
+    margin-top: 0;
   }
 }
 
-.tooltip {
-  border-bottom: 1px dashed $color-primary;
-  position: relative;
-
-  .tooltip-text {
-    position: absolute;
-    left: 0;
-    top: -2rem;
-    width: 100%;
-    text-align: center;
-    background: rgba(0,0,0,0.7);
-    line-height: 1.5;
-    color: #fff;
-    border-radius: 0.25rem;
-
-    &:after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -10px;
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 10px solid rgba(0,0,0,0.7);
-    }
-  }
-}

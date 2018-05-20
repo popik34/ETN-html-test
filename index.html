@@ -1,21 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="cs">
 <head>
     <link rel="stylesheet" href="assets/css/theme.css">
-    <script src="assets/js/theme.js"></script>
+    <title>Etnetera</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div class="header">
         <nav class="container mt-2 mb-2">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="left-nav">
                         <div class="logo">
-                            <img src="assets/img/logo.png">
+                            <img src="assets/img/logo.png" alt="logo">
+                        </div>
+                        <div class="mobile-logo">
+                            <img src="assets/img/chart-icon.png" alt="mobile logo">
                         </div>
                     </div>
 
-                    <div class="col-8 d-flex justify-content-right">
+                    <div class="mobile-menu"><a href="#" onclick="toggleMobileMenu()"><i class="material-icons">menu</i></a></div>
+
+                    <div class="right-nav justify-content-right">
                         <ul class="top-menu">
                             <li class="top-menu-item"><a href="#">Domů</a></li>
                             <li class="top-menu-item active"><a href="#">Kdo jsme</a></li>
@@ -26,38 +33,55 @@
                         </ul>
                     </div>
                 </div>
+
+                <div id="mobile-top-menu" class="mobile-top-menu">
+                    <ul class="top-menu">
+                        <li class="top-menu-item"><a href="#">Domů</a></li>
+                        <li class="top-menu-item active"><a href="#">Kdo jsme</a></li>
+                        <li class="top-menu-item"><a href="#">Co děláme</a></li>
+                        <li class="top-menu-item"><a href="#">Reference</a></li>
+                        <li class="top-menu-item"><a href="#">Práce u nás (4)</a></li>
+                        <li class="top-menu-item"><a href="#">Kontakt</a></li>
+                    </ul>
+                </div>
         </nav>
 
         <div class="container">
             <div class="carousel mb-4">
                 <div id="carousel-image-1" class="carousel-image active">
-                    <img src="assets/img/slide-1.png">
+                    <img src="assets/img/slide-1.png" alt="slide 1">
                     <div class="carousel-caption">
-                        <h1>Mobile development 1</h1>
-                        <p class="">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.</p>
-                        <p class="">Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
+                        <h1 class="carousel-title">Mobile development 1</h1>
+                        <div class="carousel-caption-text">
+                            <p class="">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.</p>
+                            <p class="">Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
+                        </div>
                     </div>
                     <div class="carousel-link">
                         <a href="#">Více o mobile</a>
                     </div>
                 </div>
                 <div id="carousel-image-2" class="carousel-image">
-                    <img src="assets/img/slide-2.png">
+                    <img src="assets/img/slide-2.png" alt="slide 2">
                     <div class="carousel-caption">
-                        <h1>Mobile development 2</h1>
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla quis diam. Pellentesque sapien.</p>
-                        <p>Pellentesque ipsum. Nullam rhoncus aliquam metus. Aliquam erat volutpat. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem.</p>
+                        <h1 class="carousel-title">Mobile development 2</h1>
+                        <div class="carousel-caption-text">
+                            <p class="">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.</p>
+                            <p class="">Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
+                        </div>
                     </div>
                     <div class="carousel-link">
                         <a href="#">Více o mobile</a>
                     </div>
                 </div>
                 <div id="carousel-image-3" class="carousel-image">
-                    <img src="assets/img/slide-3.png">
+                    <img src="assets/img/slide-3.png" alt="slide 3">
                     <div class="carousel-caption">
-                        <h1>Mobile development 3</h1>
-                        <p>Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Pellentesque ipsum. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                        <h1 class="carousel-title">Mobile development 3</h1>
+                        <div class="carousel-caption-text">
+                            <p class="">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.</p>
+                            <p class="">Dramatically maintain clicks-and-mortar solutions without functional solutions.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -75,7 +99,7 @@
                     Před 12 dny
                 </div>
                 <div class="quick-news-content">
-                     Nunc auctor. Etiam commodo dui eget wisi. Aliquam ornare wisi eu.
+                    Jiří Štěpán z Etnetera Activate poodhalil zákulisí vykutálené náborové kampaně.
                 </div>
                 <div class="quick-news-link">
                     <a class="active" href="#">Přečíst</a>
@@ -84,22 +108,49 @@
         </div>
     </div>
 
-    <div class="body-content">
+    <main class="body-content mb-4">
         <div class="container-75">
-            <h2>Fronty u kávovaru</h2>
+            <article class="mb-4">
+                <h2>Fronty u kávovaru</h2>
 
-            <img class="float-left mb-2 mr-2" src="assets/img/covfefe.png">
+                <img class="float-left mb-2 mr-2" src="assets/img/covfefe.png" alt="covfefe">
 
-            <p>Arabica latte shop macchiato doppio coffee steamed. Brewed, macchiato grounds medium, eu breve grinder frappuccino americano. Pumpkin spice, caffeine chicory dark medium arabica macchiato instant rich. Et, single shot aged half and half lungo whipped, cinnamon cappuccino whipped id mazagran.</p>
+                <p>Arabica latte shop macchiato doppio coffee steamed. Brewed, macchiato grounds medium, eu breve grinder frappuccino americano. Pumpkin spice, caffeine chicory dark medium arabica macchiato instant rich. Et, single shot aged half and half lungo whipped, cinnamon cappuccino whipped id mazagran.</p>
 
-            <p><b>Con panna</b> sugar macchiato so macchiato in skinny variety mug that. A plunger pot acerbic, brewed medium java aromatic coffee. At mocha wings acerbic beans medium saucer. Cup extra sit half and half robust java crema turkish.</p>
+                <p><b>Con panna</b> sugar macchiato so macchiato in skinny variety mug that. A plunger pot acerbic, brewed medium java aromatic coffee. At mocha wings acerbic beans medium saucer. Cup extra sit half and half robust java crema turkish.</p>
 
-            <br/>
-            <p>Medium aroma cream qui medium coffee arabica, caffeine et <a class="active" href="#">caramelization cup</a> plunger pot. Eu, plunger pot organic dark, cinnamon, redeye wings fair trade whipped lungo crema. Carajillo caramelization americano, plunger pot, filter coffee foam siphon roast and java.</p>
+                <br/>
+                <p>Medium aroma cream qui medium coffee arabica, caffeine et <a class="active" href="#">caramelization cup</a> plunger pot. Eu, plunger pot organic dark, cinnamon, redeye wings fair trade whipped lungo crema. Carajillo caramelization americano, plunger pot, filter coffee foam siphon roast and java.</p>
 
-            <p>Galão a, breve, at white, latte variety irish at flavour barista. Half and half, so, sweet, <span class="tooltip">affogato galão <span class="tooltip-text">espresso!</span></span>, half and half sugar irish trifecta chicory. Single origin, espresso, con panna french press et steamed robust.</p>
+                <p>Galão a, breve, at white, latte variety irish at flavour barista. Half and half, so, sweet, <span class="tooltip">affogato galão <span class="tooltip-text active">espresso!</span></span>, half and half sugar irish trifecta chicory. Single origin, espresso, con panna french press et steamed robust.</p>
+            </article>
+
+            <div class="chart mb-2" id="chart-1">
+            </div>
+
+            <div class="chart mb-4" id="chart-2">
+            </div>
+
+            <article>
+                <h2>Více o kávě</h2>
+
+                <div class="columns" lang="en">
+                    <p>Shop robust café au lait, cortado that, kopi-luwak skinny sweet crema fair <b>trade aged</b>, cultivar medium decaffeinated medium siphon crema cappuccino macchiato froth roast cinnamon aroma crema. Con panna americano skinny blue mountain decaffeinated, trifecta barista sugar, in saucer in filter that. Roast sit, robusta aged spoon, filter beans blue mountain milk crema dark eu <a class="active" href="#">affogato barista</a> caffeine grinder, aromatic instant cup as robusta steamed doppio. Aftertaste, kopi-luwak, cappuccino siphon beans galão decaffeinated mug, froth half and <b>half eu java roast</b>, lungo, id fair trade organic doppio filter instant carajillo.</p>
+
+                    <p>Id siphon and, java, cappuccino milk cortado, siphon macchiato galão a irish flavour. Carajillo irish percolator steamed, medium galão latte, mocha est, medium, iced cappuccino americano, caramelization ristretto, in latte, flavour cup roast trifecta aged. Variety single origin steamed, at, galão bar turkish con panna cream aroma variety carajillo</p>
+
+                    <p>Irish carajillo decaffeinated instant, pumpkin spice as, cup, dripper strong breve, est white crema viennese latte. Irish cup medium body organic, white americano galão plunger pot coffee, robust, carajillo, steamed, cream, java, cinnamon mazagran so caffeine latte flavour. <b>Shop, turkish iced</b> qui that steamed sweet, mazagran, macchiato est robusta spoon as, rich eu crema, chicory foam single shot organic sugar galão seasonal trifecta. Viennese half and half organic aged <a class="active" href="#">extraction cup</a>, espresso irish latte mug grinder turkish variety.</p>
+                </div>
+            </article>
         </div>
-    </div>
-</body>
+    </main>
 
+    <footer class="footer mb-2">
+        <div class="copyright uppercase mb-2"><a class="active" href="#">copyright</a>
+        <br/>© 2015 Etnetera</div>
+        Jsme hrdým členem <a class="active" href="#">Etnetera Group</a>
+    </footer>
+
+    <script src="assets/js/theme-min.js"></script>
+</body>
 </html>

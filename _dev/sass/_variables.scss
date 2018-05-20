@@ -8,6 +8,10 @@ $font-size-lg: 1.25rem;
 $font-size: 1rem;
 $font-size-sm: 0.75rem;
 
+$display-1: 1.5rem;
+$display-2: 2rem;
+$display-3: 2.5rem;
+
 $color-primary: #e84d0f;
 
 $screen-sm: 576px;
@@ -15,4 +19,4 @@ $screen-md: 768px;
 $screen-lg: 992px;
 $screen-xl: 1200px;
 
-$material-design-icons-font-path: "../../node_modules/material-design-icons-iconfont/dist/fonts/";
+$material-icons-font-path: '../fonts/';

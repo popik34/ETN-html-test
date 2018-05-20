@@ -1,0 +1,24 @@
+.quick-news {
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include xl {
+    width: 75%;
+  }
+
+  div {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  .quick-news-date {
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    color: $gray;
+  }
+}

@@ -1,0 +1,139 @@
+.carousel {
+  width: 100%;
+  position: relative;
+
+  .carousel-image{
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &.active {
+      opacity: 1;
+      position: initial;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+  .carousel-title {
+    text-shadow: 1px 1px 4px $font-color;
+
+    @include md {
+      font-size: $display-3;
+    }
+
+    @include sm {
+      font-size: $display-1;
+    }
+  }
+
+  .carousel-caption {
+    position: absolute;
+    left: 12.5%;
+    top: 10%;
+    right: 12.5%;
+    width: 45%;
+    z-index: 1;
+    font-size: $font-size-lg;
+
+    @include xl {
+      width: 55%;
+    }
+
+    @include lg {
+      width: 75%;
+      text-align: center;
+      .carousel-caption-text {
+        display: none;
+      }
+    }
+
+    @include md {
+      width: 75%;
+      .carousel-caption-text {
+        display: none;
+      }
+    }
+
+    @include sm {
+      width: 75%;
+      .carousel-caption-text {
+        display: none;
+      }
+    }
+  }
+
+  .carousel-link {
+    position: absolute;
+    right: 12.5%;
+    top: 75%;
+    background: #fff;
+    padding: 1rem 0;
+    border-radius: 4rem;
+    z-index: 1;
+    border: 1px solid $color-primary;
+
+    a {
+      border-radius: 4rem;
+      padding: 1rem 4rem;
+    }
+
+    @include md {
+      top: 65%;
+      a {
+        padding: 1rem 2rem;
+      }
+    }
+
+    @include sm {
+      top: 65%;
+      padding: 0;
+      a {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  .carousel-controls {
+
+    .material-icons {
+      font-size: 7rem;
+
+      @include md {
+        font-size: 5rem;
+      }
+
+      @include sm {
+        font-size: 3rem;
+      }
+    }
+
+    .carousel-arrow-left, .carousel-arrow-right {
+      &:hover .material-icons {
+        color: $color-primary;
+      }
+      position: absolute;
+      top: calc(50% - 7rem / 2);
+
+      @include md {
+        top: calc(50% - 5rem / 2);
+      }
+
+      @include sm {
+        top: calc(50% - 3rem / 2);
+      }
+      cursor: pointer;
+    }
+
+    .carousel-arrow-left {
+      left: 0;
+    }
+
+    .carousel-arrow-right {
+      right: 0;
+    }
+  }
+}
